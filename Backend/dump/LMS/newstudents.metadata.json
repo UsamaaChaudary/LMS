@@ -1,0 +1,1 @@
+{"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_"},{"v":{"$numberInt":"2"},"key":{"bsfId":{"$numberInt":"1"}},"name":"bsfId_1","background":true,"unique":true}],"uuid":"21fb555f3b264c7ca2dac964c8779784","collectionName":"newstudents","type":"collection"}

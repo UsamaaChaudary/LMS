@@ -1,0 +1,128 @@
+from dotenv import load_dotenv 
+import os  
+import sqlite3 
+from flask import Flask, request, jsonify  
+from flask_cors import CORS  
+import google.generativeai as genai  
+load_dotenv() 
+genai.configure(api_key=os.getenv("env")) 
+app = Flask(__name__)  
+
+CORS(app) 
+
+
+prompt = [
+    """
+    You are an expert in converting English questions to valid SQL queries for an SQLite database.
+    The SQL database has the name STUDENT and includes the following columns: NAME, CLASS, SECTION.
+
+    Examples:
+    - Question: How many entries of records are present?
+      SQL: SELECT COUNT(*) FROM STUDENT;
+    - Question: Tell me all the students studying in Data Science class?
+      SQL: SELECT * FROM STUDENT WHERE CLASS="Data Science";
+
+    Instructions:
+    - Do not include "SQL:" or any unnecessary formatting.
+    - Ensure the SQL query is valid for SQLite.
+    """
+]
+
+
+def get_gemini_response(question, prompt):
+    """
+    This function sends the user's question to the Gemini model along with the prompt,
+    and returns the generated SQL query.
+    """
+    try:
+        model = genai.GenerativeModel("gemini-pro")
+
+        response = model.generate_content([prompt[0], question])
+
+        sql_query = response.text.strip()
+
+        if sql_query.lower().startswith("sql:"):
+            sql_query = sql_query[4:].strip()
+
+        print(f"Generated SQL Query: {sql_query}")
+
+        return sql_query
+    except Exception as e:
+       
+        print(f"Error generating SQL: {e}")
+        raise ValueError("Failed to generate SQL query.")
+
+def read_sql_query(sql, db):
+    """
+    This function takes an SQL query and the database name,
+    executes the query, and returns the result rows.
+    """
+    try:
+      
+        validate_sql_query(sql)
+
+        conn = sqlite3.connect(db)
+
+        cur = conn.cursor()
+
+        cur.execute(sql)
+        rows = cur.fetchall()
+
+        conn.commit()
+        conn.close()
+
+        return rows
+    except sqlite3.Error as e:
+       
+        print(f"SQLite Error: {e}")
+        raise ValueError(f"Invalid SQL query: {e}")
+
+def validate_sql_query(sql):
+    """
+    This function checks that the SQL query contains only allowed SQL keywords
+    to prevent SQL injection and ensure safety.
+    """
+    allowed_keywords = ["SELECT", "FROM", "WHERE", "COUNT", "AND", "OR", "LIKE", "GROUP BY", "ORDER BY", "LIMIT"]
+
+    if not any(keyword in sql.upper() for keyword in allowed_keywords):
+        raise ValueError("SQL query contains unsafe or invalid keywords.")
+
+    return True
+
+@app.route('/api/query', methods=['POST'])
+def query():
+    """
+    This route listens for POST requests to generate and execute SQL queries.
+    It receives a question from the frontend, processes it, generates a SQL query,
+    executes it on the database, and returns the results.
+    """
+
+    data = request.json
+    question = data.get("question", "")
+
+    if not question:
+        return jsonify({"error": "No question provided"}), 400
+
+    try:
+        
+        sql_query = get_gemini_response(question, prompt)
+
+        rows = read_sql_query(sql_query, "testing.db")
+
+        return jsonify({"sql": sql_query, "results": rows})
+    except ValueError as e:
+        
+        return jsonify({"error": str(e)}), 400
+    except Exception as e:
+        
+        return jsonify({"error": "Internal server error"}), 500
+
+
+if __name__ == "__main__":
+    """
+    This block runs the Flask web application.
+    The app will listen on port 5000 by default, unless specified otherwise.
+    """
+
+
+    app.run(debug=True)

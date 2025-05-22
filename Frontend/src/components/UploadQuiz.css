@@ -1,0 +1,193 @@
+/* Background */
+.upload-quiz-background {
+    flex: 1;
+    background-image: url('../assets//images/quiz.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  /* Animation */
+  .quiz-animation {
+    width: 380px;
+    height: 190px;
+    margin-top: -55px;
+  }
+  
+  /* Title */
+  
+  /* Form */
+  .quiz-form {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin-left: -290px;
+    margin-top: -10px;
+  }
+  
+  /* Inputs */
+  .input-wrapper {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin-bottom: 15px;
+  }
+  
+  .real-input {
+    position: relative;
+    z-index: 2;
+    background: transparent;
+  }
+  
+  .placeholder-text {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    color: #9ca3af; /* light gray */
+    pointer-events: none;
+    font-size: 16px;
+    z-index: 1;
+    width: calc(100% - 50px); /* Adjust width to not overlap with picker */
+    line-height: 50px;
+  }
+  
+  .quiz-input {
+    color: transparent;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    margin-top: -2px;
+    box-sizing: border-box;
+  }
+  
+  .quiz-input:focus {
+    outline: none;
+    border-color: #4c669f;
+    box-shadow: 0 0 0 2px rgba(76, 102, 159, 0.2);
+  }
+  
+  .quiz-input:focus + .placeholder-text {
+    display: none;
+  }
+  
+  .quiz-input.textarea {
+    min-height: 100px;
+    resize: vertical;
+  }
+  
+  /* File Upload */
+  .file-upload-button {
+    background: linear-gradient(to right, #4a90e2, #357abd);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    width: 296px;
+    height: 49px;
+    margin-left: 17px;
+    margin-top: 10px;
+  }
+  
+  .file-upload-button:hover {
+    background: linear-gradient(135deg, #5d77b0, #4c6aaa);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Upload Button */
+  .upload-button {
+    background: linear-gradient(to right, #4a90e2, #357abd);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    width: 296px;
+    height: 49px;
+    margin-left: 17px;
+    margin-top: 10px;
+  }
+  
+  .upload-button:hover {
+    background: linear-gradient(to right, #5d77b0, #4c6aaa);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  @media (max-width: 768px) {
+    .upload-quiz-background {
+      width: 100%;
+      margin-left: 0;
+    }
+    
+    .quiz-form {
+      padding: 20px;
+    }
+  }
+  
+  .quiz-label {
+    font-size: 14px;
+    color: #6b7280; /* subtle gray */
+    margin-bottom: 5px;
+    margin-top: 10px;
+  }
+  
+  .real-input[type="date"],
+  .real-input[type="time"] {
+    color: transparent;
+    padding-right: 40px;
+    height: 50px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  
+  .real-input[type="date"]::-webkit-calendar-picker-indicator,
+  .real-input[type="time"]::-webkit-calendar-picker-indicator {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    z-index: 3;
+  }
+  
+  .real-input[type="date"]::-webkit-datetime-edit,
+  .real-input[type="time"]::-webkit-datetime-edit {
+    display: none;
+  }
+  
+  .real-input[type="date"]::-webkit-inner-spin-button,
+  .real-input[type="date"]::-webkit-clear-button,
+  .real-input[type="time"]::-webkit-inner-spin-button,
+  .real-input[type="time"]::-webkit-clear-button {
+    display: none;
+  }
+  

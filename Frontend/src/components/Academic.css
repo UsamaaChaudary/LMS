@@ -1,0 +1,97 @@
+.academic-form-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.academic-form-container h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.academic-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.academic-form label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.academic-form input[type="text"],
+.academic-form input[type="number"],
+.academic-form input[type="file"],
+.academic-form select {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.academic-form input[type="file"] {
+  border: none;
+  font-size: 14px;
+}
+
+.academic-form select {
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.academic-form .academic-submit-btn {
+  position: relative;
+    padding: 10px 20px;
+    width: 250px;
+    height: 49px;
+    border-radius: 7px;
+    border: 1px solid rgb(61, 106, 255);
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+    background: transparent;
+    color: #007bff;
+    overflow: hidden;
+    box-shadow: 0 0 0 0 transparent;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+    margin-left: 160px;
+}
+.academic-submit-btn:hover {
+  background-color: #007bff;
+  color: #f1f3f5;
+}
+
+.academic-submit-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+
+.academic-form-container input::placeholder {
+  color: #aaa;
+}
+
+.academic-form-container input:focus,
+.academic-form-container select:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+}
+
+.academic-form-container .error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}

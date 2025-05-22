@@ -1,0 +1,108 @@
+/* Background */
+.view-assignments-background {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  
+  /* Animation size reduced */
+  .assignment-animation {
+    width: 150px; /* reduced width */
+    height: 150px; /* reduced height */
+    margin-top: -20px; /* tighter gap */
+  }
+  
+ 
+  /* Assignment list centered as a grid */
+  .assignment-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Always 3 columns */
+    gap:50px;
+    width: 100%;
+    max-width: 1200px; /* Increase max-width */
+    justify-content: center; /* Center the grid */
+  }
+  
+  /* Stylish assignment card */
+  .assignment-card {
+    background: linear-gradient(135deg, #ffffff 0%, #e3f2fd 100%);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    animation: slideFadeIn 0.8s ease both;
+    opacity: 0;
+    width: 100%;
+    margin-top: -30px; /* Ensure the card takes full width of its grid cell */
+  }
+  /* Animation */
+  @keyframes slideFadeIn {
+    from {
+      transform: translateY(30px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Hover effect */
+  .assignment-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 24px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+  }
+  
+  /* Text inside card */
+  .assignment-card p {
+    margin: 8px 0;
+    font-size: 15px;
+    color: #333;
+  }
+  
+  .assignment-card strong {
+    color: #1565c0;
+    font-weight: 600;
+  }
+  
+  /* Download button */
+  .download-button {
+    display: inline-flex;
+    align-items: center;
+    background: linear-gradient(135deg, #42a5f5, #1e88e5);
+    color: #fff;
+    padding: 10px 16px;
+    border-radius: 10px;
+    margin-top: 12px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
+  
+  .download-button:hover {
+    background: linear-gradient(135deg, #1e88e5, #1565c0);
+    transform: scale(1.05);
+  }
+  
+  .download-icon {
+    margin-right: 8px;
+    font-size: 18px;
+  }
+  
+  /* Loading text and No assignments text */
+  .loading-text,
+  .no-assignments-text {
+    margin-top: 20px;
+    font-size: 20px;
+    color: #ffffff;
+    font-style: italic;
+  }
+  

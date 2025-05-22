@@ -1,0 +1,90 @@
+/* Upload Result Page specific styling */
+.upload-result-page {
+  flex: 1;
+  background-image: url('../assets//images/result.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.upload-result-animation-container {
+  width: 180px;
+  height: 180px;
+  margin-top: -60px;
+}
+
+
+.upload-result-form-container {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.8s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 11px;
+  margin-top: -14px;
+  margin-right: 450px;
+  height: 612px;
+}
+
+.upload-result-form-container input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 15px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+.upload-result-submit-btn {
+  background: linear-gradient(to right, #4a90e2, #357abd);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+  width: 296px;
+  height: 49px;
+  margin-left: 73px;
+  margin-top: 10px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .upload-result-page {
+    width: 100%;
+    margin-left: 0;
+  }
+  
+  .upload-result-form-container {
+    padding: 20px;
+  }
+  
+  .upload-result-heading {
+    font-size: 28px;
+  }
+}

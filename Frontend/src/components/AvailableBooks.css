@@ -1,0 +1,124 @@
+.available-books-container {
+    padding: 20px;
+}
+
+.book-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+    gap: 20px;
+}
+
+.book-card {
+    background: #f5f5f5;
+    padding: 20px; 
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.available-books-dashboard {
+  display: flex;
+  min-height: 100vh;
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+.available-books-content {
+  flex: 1;
+  padding: 20px 30px;
+  animation: adminFadeIn 1s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url('../assets/images/bookshelf.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+
+
+.requests-list {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.available-books-request-card {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 16px 18px;
+  border-radius: 20px;
+  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.2);
+  transition: all 0.4s ease;
+  animation: fadeInUp 0.6s ease both;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 340px;
+}
+
+.request-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0px 10px 22px rgba(0, 0, 0, 0.25);
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 0;
+}
+
+.card-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 2px;
+}
+
+.label {
+  font-weight: 600;
+  color: #666;
+  font-size: 14px;
+  margin-right: 4px;
+}
+
+.value {
+  color: #333;
+  font-size: 16px;
+  word-break: break-word;
+  margin-left: 0;
+}
+
+.no-requests-text {
+  font-size: 22px;
+  color: #666;
+  margin-top: 40px;
+  font-weight: 500;
+  text-align: center;
+}
+
+@keyframes adminFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,226 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
+.add-item-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 99%;
+    animation: slideBackground 55s infinite;
+}
+
+@keyframes slideBackground {
+    0% { background-image: url('../assets/images/canteen-background1.jpg'); }
+    20% { background-image: url('../assets/images/canteen-background2.png'); }
+    40% { background-image: url('../assets/images/canteen-background3.jpg'); }
+    60.5% { background-image: url('../assets/images/canteen-background4.jpg'); }
+    80% { background-image: url('../assets/images/canteen-background5.jpg'); }
+    100% { background-image: url('../assets/images/canteen-background1.jpg'); }
+}
+
+.add-item-form-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    height: 500px;
+    margin-top: 35px;
+   
+}
+
+.add-item-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.add-item-form input {
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.add-item-form input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+
+.add-item-button {
+    position: relative;
+    padding: 10px 20px;
+    width: 70%;
+    height: 47px;
+    border-radius: 7px;
+    border: 1px solid rgb(61, 106, 255);
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+    background: transparent;
+    color: #007bff;
+    overflow: hidden;
+    box-shadow: 0 0 0 0 transparent;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.add-item-button:hover {
+    background: rgb(61, 106, 255);
+    color: #fff;
+    box-shadow: 0 0 30px 5px rgba(0, 142, 236, 0.815);
+    transition: all 0.2s ease-out;
+}
+
+.add-item-button::before {
+    content: '';
+    display: block;
+    width: 0px;
+    height: 86%;
+    position: absolute;
+    top: 7%;
+    left: 0%;
+    opacity: 0;
+    background: #fff;
+    box-shadow: 0 0 50px 30px #fff;
+    transform: skewX(-20deg);
+}
+
+.add-item-button:hover::before {
+    animation: sh02 0.5s 0s linear;
+}
+
+@keyframes sh02 {
+    from {
+        opacity: 0;
+        left: 0%;
+    }
+    50% {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        left: 100%;
+    }
+}
+
+.add-item-button:active {
+    box-shadow: 0 0 0 0 transparent;
+    transition: box-shadow 0.2s ease-in;
+}
+
+.canteen-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    padding: 10px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    z-index: 10;
+}
+
+.canteen-nav-logo {
+    font-size: 24px;
+    color: black;
+    font-weight: bold;
+}
+
+.canteen-heading {
+    font-size: 32px;
+    font-weight: bold;
+    color: black;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+
+.add-item-form input:disabled,
+.add-item-button:disabled {
+    background-color: #f0f0f0;
+    color: #888;
+    cursor: not-allowed;
+}
+
+.add-item-button:disabled {
+    background-color: #007bff;
+    color: #edf0f3;
+    box-shadow: none;
+    border-color: #007bff;
+}
+
+
+@media (max-width: 500px) {
+    .add-item-form-container {
+        width: 90%;
+    }
+}
+
+.profile-dropdown-container {
+    position: relative;
+}
+
+.profile-icon {
+    margin-top: 25px;
+    font-size: 56px;
+    color: black;
+    cursor: pointer;
+    /* margin-right: -80px; */
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    font-weight: normal;
+    z-index: 10;
+    margin-top: 10px;
+    /* margin-right: -50px; */
+}
+
+.dropdown-menu button {
+    width: 100%;
+    padding: 10px;
+    background: none;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    font-size: 14px;
+    color: #333;
+    border-bottom: 1px solid #ddd;
+}
+
+.dropdown-menu button:last-child {
+    border-bottom: none;
+}
+
+.dropdown-menu button:hover {
+    background-color: #f9f9f9;
+}
+
+

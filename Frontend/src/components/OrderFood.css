@@ -1,0 +1,156 @@
+/* Full page background */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.order-food-page {
+  display: flex;
+  min-height: 100vh;
+  background: #f4f5fa;
+}
+
+/* Main content area */
+.order-food-background {
+  flex: 1;
+  margin-left: 0;
+  padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  animation: slideBackground 55s infinite;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@keyframes slideBackground {
+  0% { background-image: url('../assets/images/canteen-background1.jpg'); }
+  20% { background-image: url('../assets/images/canteen-background2.png'); }
+  40% { background-image: url('../assets/images/canteen-background3.jpg'); }
+  60.5% { background-image: url('../assets/images/canteen-background4.jpg'); }
+  80% { background-image: url('../assets/images/canteen-background5.jpg'); }
+  100% { background-image: url('../assets/images/canteen-background1.jpg'); }
+}
+
+.order-food-background::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+/* Order food container */
+.order-food-container {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 30px;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.2);
+  margin-top: -16px;
+  position: relative;
+  z-index: 2;
+  backdrop-filter: blur(5px);
+}
+
+/* Animation styling */
+.order-food-animation {
+  width: 200px;
+  height: 150px;
+  margin: 0 auto 20px auto;
+  margin-top: -40px;
+}
+
+
+
+/* Error message */
+.order-food-error {
+  color: #ff3333;
+  background-color: #ffe6e6;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+/* Form styling */
+.order-food-form {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+.order-food-input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: all 0.3s;
+  background-color: rgba(249, 249, 249, 0.9);
+}
+
+.order-food-input:focus {
+  outline: none;
+  border-color: #6a11cb;
+  box-shadow: 0 0 0 2px rgba(106, 17, 203, 0.2);
+  background-color: white;
+}
+
+.order-food-input::placeholder {
+  color: #999;
+}
+
+.order-food-submit {
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-top: 10px;
+  width: 310px;
+  height: 50px;
+  margin-left: 65px;
+}
+
+.order-food-submit:hover {
+  background: linear-gradient(to right, #5a0db0, #1565e0);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .order-food-background {
+    margin-left: 0;
+    padding: 15px;
+  }
+  
+  .order-food-container {
+    padding: 20px;
+  }
+  
+  .order-food-heading {
+    font-size: 24px;
+  }
+}
+  

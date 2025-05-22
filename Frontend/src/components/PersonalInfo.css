@@ -1,0 +1,142 @@
+.admission-container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  margin-top: 80px;
+}
+
+.admission-profile-dropdown {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 100;
+}
+
+.admission-profile-icon {
+  font-size: 56px; 
+  color: #007bff;  
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 300px;
+}
+
+.admission-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ddd; 
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 200px;
+  z-index: 10;
+}
+
+.admission-dropdown-menu button {
+  width: 100%;
+  padding: 10px;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  font-size: 14px;  
+  color: #333;  
+  border-bottom: 1px solid #ddd;
+}
+
+.admission-dropdown-menu button:last-child {
+  border-bottom: none;
+}
+
+.admission-dropdown-menu button:hover {
+  background-color: #f9f9f9;
+}
+
+.admission-form-wrapper {
+  width: 200%;
+  margin: 0 auto;
+  margin-top: -65px;
+  margin-left: 340px;
+  padding: 20px;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: transparent;
+  font-family: Arial, sans-serif;
+}
+
+.admission-form-wrapper h2 {
+  text-align: center;
+  color: #333;
+}
+
+.admission-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.admission-form input,
+.admission-form select {
+  margin-bottom: 15px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.admission-submit-btn,
+.admission-next-btn,
+.admission-edit-btn {
+  padding: 10px 20px;
+  width: 48%;
+  height: 49px;
+  border-radius: 7px;
+  border: 1px solid rgb(61, 106, 255);
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2px;
+  background: transparent;
+  color: #007bff;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+  margin-bottom: 10px;
+}
+
+.admission-next-btn {
+  padding: 10px 20px;
+  width: 48%;
+  height: 49px;
+  border-radius: 7px;
+  border: 1px solid rgb(61, 106, 255);
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2px;
+  background: transparent;
+  color: #007bff;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+  margin-bottom: 40px;
+  margin-left: 320px;
+  margin-top: -60px;
+
+}
+
+.admission-submit-btn:hover,
+.admission-next-btn:hover,
+.admission-edit-btn:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+.admission-submit-btn:disabled,
+.admission-next-btn:disabled,
+.admission-edit-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  border: #f9f9f9;
+}

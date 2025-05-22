@@ -1,0 +1,200 @@
+/* Full page background */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.request-book-page {
+  display: flex;
+  min-height: 100vh;
+  background: #f4f5fa;
+}
+
+/* Sidebar styling */
+.dashboardSidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #1a1a1a;
+  width: 220px;
+  height: 104vh;
+  z-index: 100;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+}
+
+.sidebarLink {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  padding: 0 15px;
+  cursor: pointer;
+}
+
+.sidebarLink img {
+  margin-right: 15px;
+}
+
+.sidebarLink:hover {
+  background: linear-gradient(to bottom right, #6a11cb, #2575fc);
+}
+
+.sidebarText {
+  background: none;
+  border: none;
+  box-shadow: none;
+  outline: none;
+  cursor: pointer;
+  color: white;
+  padding: 5px 4px;
+  transition: all 0.3s;
+  font-size: 14px;
+  height: 30px;
+  text-align: left;
+  width: 100%;
+}
+
+/* Main content area */
+.request-book-background {
+  flex: 1;
+  margin-left: 220px;
+  padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url('../assets/images/bookshelf.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.request-book-background::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.2);
+  z-index: 1;
+}
+
+/* Request book container */
+.request-book-container {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 30px;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+  margin-top: -10px;
+  position: relative;
+  z-index: 2;
+  backdrop-filter: blur(5px);
+}
+
+/* Animation styling */
+.request-book-animation {
+  width: 200px;
+  height: 150px;
+  margin: 0 auto 20px auto;
+  margin-top: -40px;
+}
+
+/* Heading */
+.request-book-heading {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+/* Form container */
+.request-book-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 14px;
+}
+
+.form-group {
+  width: 100%;
+}
+
+/* Input and select styling */
+.request-book-input {
+  width: 100%;
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.request-book-input:focus {
+  outline: none;
+  border-color: #4a90e2;
+  box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+}
+
+/* Placeholder text */
+.request-book-input::placeholder {
+  color: #6c757d;
+}
+
+/* Submit button */
+.request-book-submit {
+  background: linear-gradient(to right, #4a90e2, #357abd);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+  width: 296px;
+  height: 49px;
+  margin-left: 73px;
+}
+
+.request-book-submit:hover {
+  background: linear-gradient(to bottom right, #6a11cb, #2575fc);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(74, 144, 226, 0.2);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .dashboardSidebar {
+    width: 60px;
+  }
+  
+  .sidebarLink {
+    justify-content: center;
+    padding: 0;
+  }
+  
+  .sidebarLink img {
+    margin-right: 0;
+  }
+  
+  .sidebarText {
+    display: none;
+  }
+  
+  .request-book-background {
+    margin-left: 60px;
+  }
+}

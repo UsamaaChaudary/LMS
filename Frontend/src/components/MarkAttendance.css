@@ -1,0 +1,158 @@
+.mark-attendance-container {
+  background: linear-gradient(to bottom right, #4c669f, #3b5998, #192f6a);
+  border-radius: 15px;
+  padding: 30px;
+  width: 800px;
+  max-width: 100%;
+  margin: 30px auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  flex: 1;
+}
+
+.mark-attendance-container h2 {
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.form-section {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 200px;
+}
+
+.form-group label {
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group select {
+  padding: 10px;
+  border: 1px solid #ddd;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #4c669f;
+  box-shadow: 0 0 0 2px rgba(76, 102, 159, 0.2);
+}
+
+.student-table-wrapper {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 20px;
+  overflow-x: auto;
+}
+
+.attendance-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.attendance-table th {
+  background: #395ba5;
+  padding: 12px;
+  text-align: left;
+}
+.attendance-table th:hover {
+  background: #395ba5;
+ 
+}
+
+.attendance-table tr.even-row td {
+  padding: 10px;
+  background: #4c669f;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.attendance-table tr.odd-row td {
+  padding: 10px;
+  background: #4c669f;
+  border-bottom: 1px solid white;
+}
+
+
+.attendance-table tr.even-row:hover td,
+.attendance-table tr.odd-row:hover td {
+  background: #4c669f;
+}
+
+.present, .absent {
+  background: none;
+  border: 2px solid;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.present {
+  border-color: #28a745;
+}
+
+.absent {
+  border-color: #dc3545;
+}
+
+.present.active {
+  background: #28a745;
+}
+
+.absent.active {
+  background: #dc3545;
+}
+
+.save-attendance-button {
+  background: linear-gradient(135deg, #8e99b3, #0642b9);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: block;
+  margin: 0 auto;
+}
+
+.save-attendance-button:hover {
+  background: linear-gradient(135deg, #8e99b3, #0642b9);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .mark-attendance-container {
+    padding: 20px;
+    margin: 20px auto;
+  }
+  
+  .form-section {
+    flex-direction: column;
+  }
+  
+  .form-group {
+    width: 100%;
+  }
+}
+  

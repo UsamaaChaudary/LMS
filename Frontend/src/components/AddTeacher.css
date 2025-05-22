@@ -1,0 +1,169 @@
+/* Admin Dashboard Styles */
+.teacher-admin-dashboard {
+    display: flex;
+    min-height: 100vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .teacher-admin-sidebar {
+    width: 260px;
+    background-color: #000000;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: teacherSlideInLeft 0.7s ease-out;
+  }
+  
+  .teacher-admin-sidebar-link {
+    width: 260px;
+    background-color: #000000;
+    color: #ffffff;
+    padding: 15px;
+    margin-bottom: 25px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-align: left;
+    height: 50px;
+    border: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+  }
+  
+  .teacher-admin-sidebar-link span {
+    margin-right: 12px;
+    font-size: 16px;
+  }
+  
+  .teacher-admin-sidebar-link:hover {
+    background: linear-gradient(to bottom right, #6a11cb, #2575fc);
+    color: #ffffff;
+  }
+  
+  .teacher-admin-logout-link {
+    background-color: #000000;
+  }
+  
+  .teacher-admin-logout-link:hover {
+    background: linear-gradient(to bottom right, #c62828, #8e0000);
+  }
+  
+  .teacher-admin-dashboard-content {
+    flex: 1;
+    padding: 60px 30px;
+    animation: teacherFadeIn 1s ease;
+  }
+  
+  /* Teacher Form Container */
+  .teacher-form-container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    position: relative;
+    margin-left: 260px;
+    top: -10px;
+    height: 670px;
+  }
+  
+  .teacher-form-container h1 {
+    font-size: 26px;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .teacher-input {
+    width: 100%;
+    background: rgba(15, 14, 14, 0.2);
+    border: none;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    color: #05050c;
+    font-size: 16px;
+  }
+  
+  .teacher-input::placeholder {
+    color: #080505;
+  }
+  
+  .teacher-submit-button {
+    background-color: #343688;
+    color: white;
+    font-weight: bold;
+    width: 90%;
+    padding: 12px;
+    font-size: 18px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    height: 56px;
+    margin-left: 20px;
+  }
+  
+  .teacher-submit-button:hover {
+    background: linear-gradient(to bottom right, #6a11cb, #2575fc);
+  }
+  
+  /* Animations */
+  @keyframes teacherSlideInLeft {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes teacherFadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .teacher-admin-sidebar {
+      width: 60px;
+    }
+    
+    .teacher-admin-sidebar-link {
+      width: 60px;
+      justify-content: center;
+      padding: 0;
+    }
+    
+    .teacher-admin-sidebar-link span:last-child {
+      display: none;
+    }
+    
+    .teacher-admin-dashboard-content {
+      margin-left: 60px;
+    }
+  }
+  
+  .teacher-animation-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -40px;
+    width: 100%;
+  }
+  

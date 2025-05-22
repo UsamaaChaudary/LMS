@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.css": "/static/css/main.4d07a2e9.css",
+    "main.js": "/static/js/main.0f7283da.js",
+    "static/js/453.8ab44547.chunk.js": "/static/js/453.8ab44547.chunk.js",
+    "static/media/canteen-background2.png": "/static/media/canteen-background2.c408db92be2f9893a8ef.png",
+    "static/media/bookshelf.jpg": "/static/media/bookshelf.79909241d509fd860291.jpg",
+    "static/media/assignment.jpg": "/static/media/assignment.14b895a441ea8faf84e5.jpg",
+    "static/media/result-logo.png": "/static/media/result-logo.498ac6c165b72d84a7f2.png",
+    "static/media/uni.jpg": "/static/media/uni.42e23cd65f22dc46ab4b.jpg",
+    "static/media/fee-logo.png": "/static/media/fee-logo.24a9e7cbe5c24270e15a.png",
+    "static/media/canteen-background5.jpg": "/static/media/canteen-background5.07987934662f05dd1058.jpg",
+    "static/media/order-food-logo.png": "/static/media/order-food-logo.946f393d5c43481482bf.png",
+    "static/media/canteen-background1.jpg": "/static/media/canteen-background1.d9906374c96d03ed608b.jpg",
+    "static/media/uni-logo.png": "/static/media/uni-logo.50dafa099971fb560e47.png",
+    "static/media/canteen-background4.jpg": "/static/media/canteen-background4.c6d281d75d91dd53f576.jpg",
+    "static/media/result.jpg": "/static/media/result.9d60ac6b55932bec4a20.jpg",
+    "static/media/student-profile-icon.png": "/static/media/student-profile-icon.d2c28987c785aa805b63.png",
+    "static/media/canteen-background3.jpg": "/static/media/canteen-background3.5cc8b52f09db402c3838.jpg",
+    "static/media/admin2.jpg": "/static/media/admin2.59f00cec9ade4286c1b8.jpg",
+    "static/media/courses-logo.png": "/static/media/courses-logo.bdd831c86e1372c79e56.png",
+    "static/media/assignment-logo.png": "/static/media/assignment-logo.50d7f74c6997f2fc9883.png",
+    "static/media/quiz.jpg": "/static/media/quiz.d7eef78c7df1d04469b5.jpg",
+    "static/media/checked.png": "/static/media/checked.4a6f0c96f85b0b72b2d2.png",
+    "static/media/payment.avif": "/static/media/payment.d83dfc22464e86f50e93.avif",
+    "static/media/book-logo.png": "/static/media/book-logo.5e4f848326b9d648398e.png",
+    "index.html": "/index.html",
+    "main.4d07a2e9.css.map": "/static/css/main.4d07a2e9.css.map",
+    "main.0f7283da.js.map": "/static/js/main.0f7283da.js.map",
+    "453.8ab44547.chunk.js.map": "/static/js/453.8ab44547.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4d07a2e9.css",
+    "static/js/main.0f7283da.js"
+  ]
+}

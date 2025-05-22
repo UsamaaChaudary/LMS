@@ -1,0 +1,139 @@
+.approvals-page-background {
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .approvals-page-container {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    padding: 30px;
+    border-radius: 20px;
+    max-width: 1000px;
+    width: 100%;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  }
+  
+  .approvals-page-heading {
+    font-size: 34px;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 30px;
+  }
+  
+  .loader {
+    font-size: 24px;
+    color: #007bff;
+  }
+  .requests-list {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 10px;
+    margin-top: 20px;
+  }
+  
+  .request-card {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 20px 25px;
+    border-radius: 20px;
+    box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.2);
+    transition: all 0.4s ease;
+    animation: fadeInUp 0.6s ease both;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .request-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0px 10px 22px rgba(0, 0, 0, 0.25);
+  }
+  
+  .label {
+    font-weight: 600;
+    color: #444;
+  }
+  
+  .status-text {
+    font-weight: 700;
+    margin-left: 5px;
+  }
+  
+  .status-text.approved {
+    color: green;
+  }
+  
+  .status-text.rejected {
+    color: red;
+  }
+  
+  .status-text.request-submitted {
+    color: blue;
+  }
+  
+  .buttons-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    gap: 10px;
+  }
+  
+  .approve-button, .reject-button {
+    flex: 1;
+    padding: 12px 0;
+    font-size: 16px;
+    border: none;
+    border-radius: 12px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .approve-button {
+    background-color: #28a745;
+  }
+  
+  .approve-button:hover {
+    background-color: #218838;
+  }
+  
+  .reject-button {
+    background-color: #dc3545;
+  }
+  
+  .reject-button:hover {
+    background-color: #c82333;
+  }
+  
+  .no-requests-text {
+    font-size: 22px;
+    color: #666;
+    margin-top: 40px;
+    font-weight: 500;
+    text-align: center;
+  }
+  
+  /* ✨ Animation for cards */
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

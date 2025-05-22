@@ -1,0 +1,109 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  border: none;
+  outline: none;
+  user-select: none;
+}
+body {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+
+  background: url("background.jpg") no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.main {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.836);
+  width: 350px;
+  height: 380px;
+
+  padding-top: 30px;
+  background-color: transparent;
+  border-radius: 8px;
+  box-shadow: 5px 5px 5px rgba(32, 32, 32, 0.8),
+    inset 3px 3px 3px rgba(41, 41, 41, 0.9);
+}
+h1 {
+  color: rgba(22, 22, 22, 0.973);
+  font-size: 34px;
+  padding-bottom: 20px;
+}
+
+.field {
+  width: 220px;
+  height: 40px;
+  margin: auto;
+  margin-bottom: 20px;
+  border-radius: 50px;
+  font-size: 25px;
+  border: 1px solid black;
+  text-align: center;
+}
+input {
+  width: 165px;
+  height: 40px;
+  padding-left: 12px;
+  background: transparent;
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+i {
+  color: rgb(92, 10, 24);
+}
+.login {
+  cursor: pointer;
+  width: 220px;
+  height: 38px;
+  color: white;
+  border-radius: 10px;
+  background-color: red;
+  font-size: 20px;
+  letter-spacing: 1px;
+  transition: 0.5s;
+}
+.login:hover {
+  background-color: orange;
+}
+p {
+  color: black;
+  margin-top: 30px;
+  font-weight: bold;
+  font-size: 16px;
+}
+span {
+  cursor: pointer;
+  display: inline-block;
+  margin-top: 15px;
+  width: 40px;
+  height: 40px;
+  padding-top: 10px;
+  font-size: 18px;
+  border-radius: 50%;
+  transition: all 0.4s;
+}
+.fa-facebook {
+  background-color: #0f6faa;
+}
+.fa-facebook:hover {
+  background: #0e6297;
+}
+.fa-google {
+  background: #de5246;
+}
+.fa-google:hover {
+  background: #f14d2c;
+}
+.fa-apple {
+  background: black;
+}
+.fa-apple:hover {
+  background: rgb(197, 177, 177);
+}

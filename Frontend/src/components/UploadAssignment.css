@@ -1,0 +1,250 @@
+/* Full page background */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.upload-assignment-page {
+  display: flex;
+  min-height: 100vh;
+  background: #f4f5fa;
+}
+
+/* Sidebar styling */
+.dashboardSidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #1a1a1a;
+  width: 220px;
+  height: 104vh;
+  z-index: 100;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+}
+
+.sidebarLink {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  padding: 0 15px;
+  cursor: pointer;
+}
+
+.sidebarLink img {
+  margin-right: 15px;
+}
+
+.sidebarLink:hover {
+  background: linear-gradient(to bottom right, #6a11cb, #2575fc);
+}
+
+.sidebarText {
+  background: none;
+  border: none;
+  box-shadow: none;
+  outline: none;
+  cursor: pointer;
+  color: white;
+  padding: 5px 4px;
+  transition: all 0.3s;
+  font-size: 14px;
+  height: 30px;
+  text-align: left;
+  width: 100%;
+}
+
+/* Main content area */
+.upload-assignment-background {
+  flex: 1;
+  margin-left: 220px;
+  padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url('../assets/images/assignment.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.upload-assignment-background::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0);
+  z-index: 1;
+}
+
+/* Assignment container */
+.upload-assignment-container {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 30px;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+  margin-top: -17px;
+  position: relative;
+  z-index: 2;
+  backdrop-filter: blur(5px);
+}
+
+/* Animation styling */
+.upload-animation {
+  width: 200px;
+  height: 150px;
+  margin: 0 auto 20px auto;
+  margin-top: -35px;
+}
+
+/* Heading */
+.upload-heading {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+/* Form container */
+.upload-assignment-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 15px;
+}
+
+/* Input and Textarea styling */
+.form-group {
+  margin-bottom: 12px;
+  width: 100%;
+}
+
+.upload-assignment-form input,
+.upload-assignment-form textarea {
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  padding: 12px;
+  width: 100%;
+  border-radius: 8px;
+  font-size: 15px;
+  color: #333;
+  transition: all 0.3s cubic-bezier(.4,0,.2,1);
+  box-shadow: 0 1px 4px rgba(74, 144, 226, 0.07);
+}
+
+.upload-assignment-form input:focus,
+.upload-assignment-form textarea:focus {
+  outline: none;
+  border-color: #4a90e2;
+  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.13);
+  background: #fff;
+}
+
+.upload-assignment-form input[type="date"] {
+  color: #333;
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 15px;
+  transition: all 0.3s cubic-bezier(.4,0,.2,1);
+  box-shadow: 0 1px 4px rgba(74, 144, 226, 0.07);
+}
+
+.upload-assignment-form input[type="date"]:focus {
+  border-color: #4a90e2;
+  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.13);
+  background: #fff;
+}
+
+.upload-assignment-form input[type="file"] {
+  padding: 10px;
+  background: #f8f9fa;
+  border: 1px dashed #dee2e6;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: border-color 0.3s;
+}
+
+.upload-assignment-form input[type="file"]:focus {
+  border-color: #4a90e2;
+  background: #fff;
+}
+
+.upload-assignment-form input:disabled {
+  background: #f0f0f0;
+  color: #aaa;
+  cursor: not-allowed;
+}
+
+.upload-assignment-form textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+.upload-assignment-form input::placeholder,
+.upload-assignment-form textarea::placeholder {
+  color: #a0a0a0;
+  opacity: 1;
+}
+
+/* Submit button */
+.submit-assignment-btn {
+ 
+  background: linear-gradient(to right, #357abd, #2d6da3);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+  width: 349px;
+  height: 49px;
+  margin-left: 49px;
+}
+
+.submit-assignment-btn:hover {
+  background: linear-gradient(to bottom right, #6a11cb, #2575fc);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(74, 144, 226, 0.2);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .dashboardSidebar {
+    width: 60px;
+  }
+  
+  .sidebarLink {
+    justify-content: center;
+    padding: 0;
+  }
+  
+  .sidebarLink img {
+    margin-right: 0;
+  }
+  
+  .sidebarText {
+    display: none;
+  }
+  
+  .upload-assignment-background {
+    margin-left: 60px;
+  }
+}

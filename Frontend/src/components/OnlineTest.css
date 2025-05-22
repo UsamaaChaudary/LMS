@@ -1,0 +1,233 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.online-test-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px;
+  text-align: center;
+}
+
+.online-test-container h2 {
+  margin-bottom: 1px;
+  margin-top: -35px;
+  font-size: 30px;
+}
+
+.select-subject {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.select-subject table {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 400px;
+  border-collapse: collapse;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.select-subject th, .select-subject td {
+  padding: 15px;
+  text-align: left;
+  font-size: 16px;
+  color: #333;
+}
+
+.select-subject th {
+  background-color: #007bff;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 8px 8px 0 0;
+}
+
+.select-subject td {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.select-subject td select {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  width: 100%;
+  max-width: 250px;
+  transition: all 0.3s ease;
+}
+
+.select-subject td select:hover {
+  border-color: #007bff;
+}
+
+.start-test-btn {
+  padding: 14px 20px;
+  width: 240px;
+  position: relative;
+  border-radius: 7px;
+  border: 1px solid rgb(61, 106, 255);
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2px;
+  background: transparent;
+  color: #007bff;
+  overflow: hidden;
+  box-shadow: 0 0 0 0 transparent;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+  margin-bottom: 4px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -32px;
+}
+
+.start-test-btn:hover {
+  background: rgb(61, 106, 255);
+  color: #fff;
+  box-shadow: 0 0 30px 5px rgba(0, 142, 236, 0.815);
+  transition: all 0.2s ease-out;
+}
+
+.submit-test-btn {
+  padding: 14px 20px;
+  width: 240px;
+  position: relative;
+  border-radius: 7px;
+  border: 1px solid rgb(61, 106, 255);
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2px;
+  background: transparent;
+  color: #007bff;
+  overflow: hidden;
+  box-shadow: 0 0 0 0 transparent;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+  margin-bottom: 40px;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.submit-test-btn:hover {
+  background: rgb(61, 106, 255);
+  color: #fff;
+  box-shadow: 0 0 30px 5px rgba(0, 142, 236, 0.815);
+  transition: all 0.2s ease-out;
+}
+
+.mcqs-table {
+  margin-top: 30px;
+  width: 100%;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  margin-top: 1px;
+}
+
+th, td {
+  padding: 12px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: #007bff;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #ddd;
+}
+
+label {
+  display: block;
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+input[type='radio'] {
+  margin-right: 8px;
+}
+
+.error {
+  color: red;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.total-attempted-container {
+  width: 100%;
+  text-align: left;
+  margin-top: 20px;
+}
+
+.total-attempted-container table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+.total-attempted-container th, .total-attempted-container td {
+  padding: 12px;
+  text-align: left;
+  font-size: 16px;
+  color: #333;
+}
+
+.total-attempted-container th {
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.total-attempted-container td {
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+
+.result-container {
+  margin-top: 40px;
+}
+
+.result-container table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+.result-container th, .result-container td {
+  padding: 12px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.result-container th {
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+}
+
+.result-container td {
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
